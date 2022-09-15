@@ -23,4 +23,27 @@ RSpec.describe Dependency do
       expect(@dp.install_count).to eq(0)
     end
   end 
+
+
+  describe 'methods' do
+    before(:each) do
+      @dp = Dependency.new("SSH")
+    end
+
+    it 'can add one to install_count' do
+      expect(@dp.install_count).to eq(0)
+
+      @dp.plusone
+
+      expect(@dp.install_count).to eq(1)
+    end
+
+    it 'can remove one to intall_count' do
+      @dp.plusone
+      expect(@dp.install_count).to eq(1)
+
+      @dp.minusone
+      expect(@dp.install_count).to eq(0)
+    end 
+  end 
 end 
