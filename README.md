@@ -2,7 +2,7 @@
 
 ## Usage
 
-To run what exists of this program, clone locally, and execute the following:
+To run what exists of this program, clone locally, and execute the following in the root of the project directory:
 
 ```
 ruby lib/main.rb input.txt
