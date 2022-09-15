@@ -45,5 +45,21 @@ RSpec.describe Dependency do
       @dp.minusone
       expect(@dp.install_count).to eq(0)
     end 
+
+    it 'can change install_status (true)' do
+      @dp.install
+      expect(@dp.install_status).to eq(true)
+    end 
+
+    it 'can change install_status (false)' do
+      @dp.plusone
+      @dp.install
+      @dp.uninstall
+      expect(@dp.install_status).to eq(true)
+      
+      @dp.minusone
+      @dp.uninstall
+      expect(@dp.install_status).to eq(false)
+    end 
   end 
 end 
