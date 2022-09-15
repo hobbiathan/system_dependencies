@@ -8,12 +8,12 @@ class Package
   end 
 
   def install
-    puts "Installing #{@name}."
+    puts "    Installing #{@name}."
     @install_status = true
   end 
 
   def uninstall
-    puts "Uninstalling #{@name}."
+    puts "    Uninstalling #{@name}."
     @install_status = false
   end 
 end 

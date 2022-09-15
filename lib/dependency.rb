@@ -16,13 +16,13 @@ class Dependency
   end 
 
   def install
-    puts "Installing #{@name}"
+    puts "    Installing #{@name}"
     @install_status = true
   end 
 
   def uninstall
     if @install_count > 0
-      puts "#{@name} is still needed."
+      puts "    #{@name} is still needed."
     else
       puts "Removing #{@name}."
       @install_status = false
